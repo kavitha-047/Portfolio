@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base-bg: #050414;
+  --color-glass-bg: rgba(255, 255, 255, 0.05);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-primary-glow: #6366f1;
+  --color-secondary-glow: #a855f7;
+}
+
+:root {
+  background-color: var(--color-base-bg);
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: var(--color-base-bg);
+}
+
+/* EKI Style Utilities */
+.glass-ui {
+  background: var(--color-glass-bg);
+  border: 1px solid var(--color-glass-border);
+  backdrop-filter: blur(20px);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-blob {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  filter: blur(150px);
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.grid-overlay {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.05;
+  pointer-events: none;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+}
+
+
+.vignette {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 0%, rgba(5, 4, 20, 0.5) 100%);
+  pointer-events: none;
+  z-index: -1;
+}
