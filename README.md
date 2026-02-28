@@ -1,6 +1,6 @@
 # 🚀 Professional Portfolio
 
-A modern, high-performance portfolio website built with React, Tailwind CSS, and Framer Motion. This project features a clean "EKI" style (Dark, Grid, Glow, Glassmorphism) and is fully integrated with Supabase for real-time contact form submissions.
+A modern, high-performance portfolio website built with React, Tailwind CSS, and Framer Motion. This project is a professional showcase of web development skills, featuring smooth animations, a glassmorphism UI, and full integration with Supabase for real-time contact form submissions.
 
 ## ✨ Features
 

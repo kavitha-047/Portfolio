@@ -20,7 +20,7 @@ body {
   background-color: var(--color-base-bg);
 }
 
-/* EKI Style Utilities */
+/* Core UI Style Utilities */
 .glass-ui {
   background: var(--color-glass-bg);
   border: 1px solid var(--color-glass-border);
