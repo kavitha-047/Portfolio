@@ -71,7 +71,7 @@ const Contact = () => {
                             <div className="flex gap-4">
                                 {[
                                     { Icon: Github, href: "https://github.com/kavitha-047" },
-                                    { Icon: Linkedin, href: "https://www.linkedin.com/in/kavitha470" },
+                                    { Icon: Linkedin, href: "https://www.linkedin.com/in/kavitha470/" },
                                     { Icon: Instagram, href: "#" }
                                 ].map(({ Icon, href }, index) => (
                                     <motion.a
