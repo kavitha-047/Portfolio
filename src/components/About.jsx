@@ -51,7 +51,7 @@ const About = () => {
 
                         <div className="flex flex-wrap gap-4">
                             <a
-                                href="/Kavitha k (1.pdf"
+                                href="/Kavitha_K_CV.pdf"
                                 target="_blank"
                                 className="px-6 py-3 rounded-xl bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 hover:bg-indigo-600 transition-all duration-300 flex items-center gap-2 group"
                             >
