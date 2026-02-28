@@ -1,8 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-import internshipImg from "../assets/internship.png";
-import courseImg from "../assets/course.png";
 
 const Milestones = () => {
     const milestonesData = [
@@ -12,7 +10,7 @@ const Milestones = () => {
             title: "Frontend Intern",
             company: "MentorHints",
             description: "Developed a Full Stack Application, collaborated with UI/UX Team, Frontend Team, Backend Team.",
-            credentialLink: internshipImg
+            credentialLink: "/internship.png"
         },
         {
             type: "Course",
@@ -20,7 +18,7 @@ const Milestones = () => {
             title: "Front-End Development",
             company: "Mentor Hints",
             description: "Comprehensive certification on modern frontend technologies including React, Tailwind CSS, and UX principles.",
-            credentialLink: courseImg
+            credentialLink: "/course.png"
         }
     ];
 

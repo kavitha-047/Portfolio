@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github, Award, Layout, Cpu, Eye } from "lucide-react";
-import ilovepdfImg from "../assets/ilovepdf.png";
-import planteeImg from "../assets/plantee.png";
-import courseImg from "../assets/course.png";
-import internshipImg from "../assets/internship.png";
-import wordpressImg from "../assets/Wordpress.jpg";
-import vibeCodingImg from "../assets/vibw coding.jpg";
 
 const Portfolio = () => {
     const [activeTab, setActiveTab] = useState("projects");
@@ -17,7 +11,7 @@ const Portfolio = () => {
             id: "project-1",
             title: "I love PDF",
             description: "A web-based PDF utility application that allows users to merge, split, seamlessly in the browser. Built with a focus on performance and simplicity.",
-            image: ilovepdfImg,
+            image: "/ilovepdf.png",
             tags: ["React", "Tailwind", "Firebase"],
             live: "https://intern-proto2.vercel.app/",
             github: "https://github.com/MuthuKr1shhnan/intern-proto2"
@@ -26,7 +20,7 @@ const Portfolio = () => {
             id: "project-2",
             title: "Plantee",
             description: "A responsive plant care web app that helps users explore plant species, care tips, and build a personal plant wishlist. Designed with a fresh UI.",
-            image: planteeImg,
+            image: "/plantee.png",
             tags: ["Supabase", "Javascript", "Framer Motion"],
             live: "https://planteee.netlify.app/",
             github: "https://github.com/kavitha-047/plantee"
@@ -57,28 +51,28 @@ const Portfolio = () => {
             title: "Front-End Development",
             issuer: "Mentor Hints",
             year: "2025",
-            image: courseImg,
+            image: "/course.png",
         },
         {
             id: "cert-2",
             title: "Front-End Development",
             issuer: "Mentor Hints",
             year: "2025",
-            image: internshipImg,
+            image: "/internship.png",
         },
         {
             id: "cert-3",
             title: "wordpress",
             issuer: "Udemy",
             year: "2025",
-            image: wordpressImg,
+            image: "/Wordpress.jpg",
         },
         {
             id: "cert-4",
             title: "Vibe Coding",
             issuer: "Udemy",
             year: "2025",
-            image: vibeCodingImg,
+            image: "/vibw coding.jpg",
         }
     ];
 

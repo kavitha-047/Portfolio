@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Instagram, ExternalLink, Mail } from "lucide-react";
-import heroAnimation from "../assets/Animation1.gif";
 
 const Hero = () => {
     // Data array for tech chips
@@ -112,7 +111,7 @@ const Hero = () => {
                     <div className="absolute w-[100%] h-[100%] border border-purple-500/5 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
 
                     <img
-                        src={heroAnimation}
+                        src="/Animation1.gif"
                         alt="Hero Illustration"
                         className="w-full max-w-[500px] relative z-10 drop-shadow-[0_0_50px_rgba(99,102,241,0.2)]"
                         onError={(e) => {
