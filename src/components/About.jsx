@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FileText, ArrowRight } from "lucide-react";
+import kaviPhoto from "../assets/kaviphoto.jpeg";
+import cvFile from "../assets/Kavitha k (1.pdf";
 
 const About = () => {
     return (
@@ -51,7 +53,7 @@ const About = () => {
 
                         <div className="flex flex-wrap gap-4">
                             <a
-                                href="/src/assets/Kavitha k (1.pdf"
+                                href={cvFile}
                                 target="_blank"
                                 className="px-6 py-3 rounded-xl bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 hover:bg-indigo-600 transition-all duration-300 flex items-center gap-2 group"
                             >
@@ -78,7 +80,7 @@ const About = () => {
                             <div className="relative w-full h-full rounded-full p-1 bg-gradient-to-tr from-indigo-500 via-purple-500 to-blue-500">
                                 <div className="w-full h-full rounded-full bg-[#050414] overflow-hidden p-1">
                                     <img
-                                        src="/src/assets/kaviphoto.jpeg"
+                                        src={kaviPhoto}
                                         alt="Kavitha kanagaraj"
                                         className="w-full h-full object-cover rounded-full hover:scale-110 transition-transform duration-700"
                                         onError={(e) => {
