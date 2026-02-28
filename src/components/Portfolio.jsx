@@ -153,6 +153,9 @@ const Portfolio = () => {
                                                     src={project.image}
                                                     alt={project.title}
                                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                                    onError={(e) => {
+                                                        e.target.src = "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800";
+                                                    }}
                                                 />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-[#050414] via-transparent to-transparent opacity-60" />
 
@@ -209,6 +212,9 @@ const Portfolio = () => {
                                                     src={cert.image}
                                                     alt={cert.title}
                                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                                    onError={(e) => {
+                                                        e.target.src = "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800";
+                                                    }}
                                                 />
                                                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
                                                     <button className="px-6 py-2 bg-white text-black rounded-xl font-bold flex items-center gap-2">
