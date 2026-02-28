@@ -2,6 +2,9 @@
 
 A modern, high-performance portfolio website built with React, Tailwind CSS, and Framer Motion. This project is a professional showcase of web development skills, featuring smooth animations, a glassmorphism UI, and full integration with Supabase for real-time contact form submissions.
 
+## Live Demo
+ URL : https://portfoliokavi.netlify.app/
+
 ## ✨ Features
 
 - **Dynamic Design**: Clean, modern UI with grid overlays, glassmorphism, and vibrant glow effects.
@@ -43,8 +46,7 @@ A modern, high-performance portfolio website built with React, Tailwind CSS, and
 3. **Set up Environment Variables**:
    Create a `.env` file in the root directory and add your Supabase credentials:
    ```env
-   VITE_SUPABASE_URL=your_supabase_url
-   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   
    ```
 
 4. **Run the development server**:
