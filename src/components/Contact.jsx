@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Send, Github, Linkedin, Instagram, MapPin, Phone } from "lucide-react";
 import { supabase } from "../supabaseClient";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -32,6 +33,23 @@ const Contact = () => {
                 ]);
 
             if (error) throw error;
+
+            // Send Email Notification using EmailJS
+            try {
+                await emailjs.send(
+                    import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                    import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                    {
+                        from_name: formData.name,
+                        from_email: formData.email,
+                        message: formData.message,
+                        to_email: "kavithakanagaraj470@gmail.com", // Your designated email
+                    },
+                    import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+                );
+            } catch (emailError) {
+                console.error("Email notification failed:", emailError);
+            }
 
             setStatus({ type: "success", message: "Message sent successfully!" });
             setFormData({ name: "", email: "", message: "" });
