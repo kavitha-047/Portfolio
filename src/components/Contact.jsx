@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Send, Github, Linkedin, Instagram, MapPin, Phone } from "lucide-react";
+import { supabase } from "../supabaseClient";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -15,11 +16,31 @@ const Contact = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Placeholder for contact logic
-        setStatus({ type: "success", message: "Message sent! (Mockuo)" });
-        setTimeout(() => setStatus({ type: "", message: "" }), 3000);
+        setStatus({ type: "loading", message: "Sending message..." });
+
+        try {
+            const { error } = await supabase
+                .from("messages")
+                .insert([
+                    {
+                        name: formData.name,
+                        email: formData.email,
+                        message: formData.message,
+                    }
+                ]);
+
+            if (error) throw error;
+
+            setStatus({ type: "success", message: "Message sent successfully!" });
+            setFormData({ name: "", email: "", message: "" });
+        } catch (error) {
+            console.error("Error sending message:", error);
+            setStatus({ type: "error", message: "Failed to send message. Please try again." });
+        } finally {
+            setTimeout(() => setStatus({ type: "", message: "" }), 3000);
+        }
     };
 
     return (
