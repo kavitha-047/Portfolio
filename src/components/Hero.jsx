@@ -2,10 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Instagram, ExternalLink, Mail } from "lucide-react";
 
-const Hero = () => {
-    // Data array for tech chips
-    const techStack = ["React", "JavaScript", "Tailwind", "Vite"];
+// Data moved outside to prevent re-renders
+const TECH_STACK = ["React", "JavaScript", "Tailwind", "Vite"];
+const SOCIAL_LINKS = [
+    { Icon: Github, href: "https://github.com/kavitha-047" },
+    { Icon: Linkedin, href: "https://www.linkedin.com/in/kavitha470/" },
+    { Icon: Instagram, href: "#" }
+];
 
+const Hero = () => {
     return (
         <div className="relative min-h-screen flex items-center justify-center pt-20 pb-32 overflow-hidden">
             <div className="max-w-6xl w-full mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-12 items-center">
@@ -41,7 +46,7 @@ const Hero = () => {
 
                     {/* Tech Chips */}
                     <div className="flex flex-wrap gap-3 mb-10">
-                        {techStack.map((tech, index) => (
+                        {TECH_STACK.map((tech, index) => (
                             <motion.span
                                 key={tech}
                                 initial={{ opacity: 0, y: 20 }}
@@ -79,11 +84,7 @@ const Hero = () => {
 
                     {/* Social Icons */}
                     <div className="flex gap-4">
-                        {[
-                            { Icon: Github, href: "https://github.com/kavitha-047" },
-                            { Icon: Linkedin, href: "https://www.linkedin.com/in/kavitha470/" },
-                            { Icon: Instagram, href: "#" }
-                        ].map(({ Icon, href }, index) => (
+                        {SOCIAL_LINKS.map(({ Icon, href }, index) => (
                             <motion.a
                                 key={index}
                                 whileHover={{ scale: 1.1, y: -5 }}
@@ -104,16 +105,18 @@ const Hero = () => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 0.2 }}
-                    className="relative flex justify-center items-center"
+                    className="relative flex justify-center items-center h-full min-h-[400px]"
                 >
-                    {/* Animated background rings */}
-                    <div className="absolute w-[120%] h-[120%] border border-indigo-500/5 rounded-full animate-[spin_20s_linear_infinite]" />
-                    <div className="absolute w-[100%] h-[100%] border border-purple-500/5 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
+                    {/* Animated background rings - Optimized with pointer-events-none and will-change */}
+                    <div className="absolute w-[120%] h-[120%] border border-indigo-500/5 rounded-full animate-[spin_20s_linear_infinite] pointer-events-none will-change-transform" />
+                    <div className="absolute w-[100%] h-[100%] border border-purple-500/5 rounded-full animate-[spin_15s_linear_infinite_reverse] pointer-events-none will-change-transform" />
 
                     <img
                         src="/Animation1.gif"
                         alt="Hero Illustration"
-                        className="w-full max-w-[500px] relative z-10 drop-shadow-[0_0_50px_rgba(99,102,241,0.2)]"
+                        loading="eager"
+                        decoding="async"
+                        className="w-full max-w-[500px] relative z-10 drop-shadow-[0_0_50px_rgba(99,102,241,0.2)] [transform:translateZ(0)] [backface-visibility:hidden]"
                         onError={(e) => {
                             e.target.src = "https://img.freepik.com/free-vector/gradient-ui-ux-elements-background_23-2149056159.jpg";
                         }}
