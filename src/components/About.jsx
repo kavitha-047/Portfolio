@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FileText, ArrowRight } from "lucide-react";
+import resume from "../assets/Kavitha Resume1.pdf";
 
 const About = () => {
     return (
@@ -51,8 +52,10 @@ const About = () => {
 
                         <div className="flex flex-wrap gap-4">
                             <a
-                                href="/Kavitha_K_CV.pdf"
+                                href={resume}
+                                download="Kavitha_Resume.pdf"
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 className="px-6 py-3 rounded-xl bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 hover:bg-indigo-600 transition-all duration-300 flex items-center gap-2 group"
                             >
                                 <FileText size={20} />
