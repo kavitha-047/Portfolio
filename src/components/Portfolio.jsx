@@ -73,6 +73,13 @@ const Portfolio = () => {
             issuer: "Udemy",
             year: "2025",
             image: "/vibw coding.jpg",
+        },
+        {
+            id: "cert-5",
+            title: "AI Course",
+            issuer: "Coursera",
+            year: "2026",
+            image: "/Google AI.png",
         }
     ];
 
