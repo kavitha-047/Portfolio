@@ -22,6 +22,12 @@ const Contact = () => {
         setStatus({ type: "loading", message: "Sending message..." });
 
         try {
+            // First validation
+            if (!formData.name || !formData.email || !formData.message) {
+                setStatus({ type: "error", message: "Please fill in all fields." });
+                return;
+            }
+
             const { error } = await supabase
                 .from("messages")
                 .insert([
@@ -32,7 +38,10 @@ const Contact = () => {
                     }
                 ]);
 
-            if (error) throw error;
+            if (error) {
+                console.error("Supabase error:", error);
+                throw new Error(error.message || "Failed to save message to database.");
+            }
 
             // Send Email Notification using EmailJS
             try {
@@ -43,21 +52,32 @@ const Contact = () => {
                         from_name: formData.name,
                         from_email: formData.email,
                         message: formData.message,
-                        to_email: "kavithakanagaraj470@gmail.com", // Your designated email
+                        to_email: "kavithakanagaraj470@gmail.com",
                     },
                     import.meta.env.VITE_EMAILJS_PUBLIC_KEY
                 );
             } catch (emailError) {
                 console.error("Email notification failed:", emailError);
+                // We don't throw here because the message was already saved to Supabase
             }
 
             setStatus({ type: "success", message: "Message sent successfully!" });
             setFormData({ name: "", email: "", message: "" });
+
+            // Clear success message after 5 seconds
+            setTimeout(() => setStatus({ type: "", message: "" }), 5000);
+
         } catch (error) {
             console.error("Error sending message:", error);
-            setStatus({ type: "error", message: "Failed to send message. Please try again." });
-        } finally {
-            setTimeout(() => setStatus({ type: "", message: "" }), 3000);
+            let userMessage = "Failed to send message. Please try again.";
+
+            if (error.message.includes("fetch")) {
+                userMessage = "Connection error. Please check your internet or Supabase configuration.";
+            } else if (error.message) {
+                userMessage = error.message;
+            }
+
+            setStatus({ type: "error", message: userMessage });
         }
     };
 
