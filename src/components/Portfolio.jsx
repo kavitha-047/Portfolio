@@ -27,7 +27,7 @@ const Portfolio = () => {
         },
         {
             id: "project-3",
-            title: "Client Portfolio",
+            title: "Client-Portfolio",
             description: "A modern and responsive portfolio website created for my client,to showcase profile, skills, and personal brand with a clean and aesthetic design.",
             image: "/manju-P card.png",
             tags: ["tailwind", "React", "Framer Motion"],
