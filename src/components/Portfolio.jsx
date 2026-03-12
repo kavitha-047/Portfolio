@@ -32,7 +32,7 @@ const Portfolio = () => {
             image: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2064&auto=format&fit=crop",
             tags: ["tailwind", "Stripe", "wordpress"],
             live: "#",
-            github: "#"
+            github: "https://github.com/kavitha-047/manju--portfolio"
         },
         {
             id: "project-4",
