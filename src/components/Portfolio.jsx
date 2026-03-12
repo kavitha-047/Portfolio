@@ -31,7 +31,7 @@ const Portfolio = () => {
             description: "A modern and responsive portfolio website created for my client,to showcase profile, skills, and personal brand with a clean and aesthetic design.",
             image: "/manju-P card.png",
             tags: ["Netlify", "React", "Framer Motion"],
-            live: "",
+            live: "https://manjulasivasamy.netlify.app/c",
             github: ""
         },
         {
