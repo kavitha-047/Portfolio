@@ -28,10 +28,10 @@ const Portfolio = () => {
         {
             id: "project-3",
             title: "Client-Portfolio",
-            description: "A modern and responsive portfolio website created for my client,to showcase profile, skills, and personal brand with a clean and aesthetic design.",
+            description: "A modern and responsive portfolio website created for my client,to showcase profile, skills, and personal brand with clean and aesthetic design.",
             image: "/manju-P card.png",
             tags: ["Netlify", "React", "Framer Motion"],
-            live: "https://manjulasivasamy.netlify.app/c",
+            live: "https://manjulasivasamy.netlify.app/",
             github: "https://github.com/kavitha-047/manju--portfolio"
         },
         {
