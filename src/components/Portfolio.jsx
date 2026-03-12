@@ -27,7 +27,7 @@ const Portfolio = () => {
         },
         {
             id: "project-3",
-            title: "E-Shop Modern",
+            title: "Client Portfolio",
             description: "A sophisticated e-commerce platform with real-time inventory tracking, secure Stripe integration, and a premium shopping experience.",
             image: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2064&auto=format&fit=crop",
             tags: ["tailwind", "Stripe", "wordpress"],
