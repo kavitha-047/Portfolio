@@ -31,7 +31,7 @@ const Portfolio = () => {
             description: "A sophisticated e-commerce platform with real-time inventory tracking, secure Stripe integration, and a premium shopping experience.",
             image: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2064&auto=format&fit=crop",
             tags: ["tailwind", "Stripe", "wordpress"],
-            live: "#",
+            live: "https://manjulasivasamy.netlify.app/",
             github: "https://github.com/kavitha-047/manju--portfolio"
         },
         {
