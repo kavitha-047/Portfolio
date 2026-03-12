@@ -32,7 +32,7 @@ const Portfolio = () => {
             image: "/manju-P card.png",
             tags: ["Netlify", "React", "Framer Motion"],
             live: "https://manjulasivasamy.netlify.app/c",
-            github: ""
+            github: "https://github.com/kavitha-047/manju--portfolio"
         },
         {
             id: "project-4",
