@@ -36,7 +36,7 @@ const Portfolio = () => {
         },
         {
             id: "project-4",
-            title: "Echo Stream",
+            title: "Sri Arungaraiamman School Website",
             description: "A high-performance audio streaming dashboard with real-time analytics, user-centric playlists, and seamless audio synchronization.",
             image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop",
             tags: ["Typescript", "Web Audio API", "Tailwind"],
