@@ -41,7 +41,7 @@ const Portfolio = () => {
             image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop",
             tags: ["Typescript", "Web Audio API", "Tailwind"],
             live: "https://srianungaraiammamschool.netlify.app/",
-            github: "#"
+            github: "https://github.com/kavitha-047/School-Website"
         }
     ];
 
