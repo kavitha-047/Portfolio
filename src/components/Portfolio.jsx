@@ -39,7 +39,7 @@ const Portfolio = () => {
             title: "Sri Arungaraiamman School Website",
             description: "Designed and developed a responsive school website to present school information, improve online presence, and make it easier for students and parents to access important details.",
             image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop",
-            tags: ["Typescript", "Web Audio API", "Tailwind"],
+            tags: ["Javascript", "CSS", "HTML"],
             live: "https://srianungaraiammamschool.netlify.app/",
             github: "https://github.com/kavitha-047/School-Website"
         }
