@@ -76,10 +76,17 @@ const Portfolio = () => {
         },
         {
             id: "cert-5",
-            title: "AI Course",
+            title: "AI Course By Google",
             issuer: "Coursera",
             year: "2026",
-            image: "/Google AI.png",
+            image: "./Google AI.png",
+        }
+        {
+            id: "cert-6",
+            title: "AI Course By Google",
+            issuer: "Coursera",
+            year: "2026",
+            image: "./assets/Google Prompt.png",
         }
     ];
 
